@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>New user login</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='css/style.css') }}"
+
+      type="text/css"
+    />
+    <!--This is done when u want to add a static file in your program.In flask, all static files(css,js,images) are stored in the static folder-->
+    <!--cdn-content delivery network:loads the css using url..neednt hav a sep css file-->
+  </head>
+  <body class="bg-nav">
+    <nav class="navbar">
+      <a class="navbar-brand text-light padding_nav" href="">Library Register Page</a>
+    </nav>
+
+    <div class="container card mt-100">
+    <form class="form" method="post" action="/add_student">
+        <div class="row g-3 card-body">
+          <div class="col-md-12">
+            <label>Full Name</label>
+            <input type="text" class="form-control" placeholder="name" name="username"/><br>
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" name="useremail"><br>
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword4" name="userpassword"><br>
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">City</label>
+            <input type="text" class="form-control" id="inputCity" name="city"><br>
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">State</label>
+            <select id="inputState" class="form-select" name="state"><br>
+                <option selected>Choose State</option>
+                <option>Andaman and Nicobar Islands</option>
+                <option>Andhra Pradesh</option>
+                <option>Arunachal Pradesh</option>
+                <option>Assam</option>
+                <option>Bihar</option>
+                <option>Chandigarh</option>
+                <option>Chhattisgarh</option>
+                <option>Dadra and Nagar Haveli</option>
+                <option>Daman and Diu</option>
+                <option>Delhi</option>
+                <option>Goa</option>
+                <option>Gujarat</option>
+                <option>Haryana</option>
+                <option>Himachal Pradesh</option>
+                <option>Jammu and Kashmir</option>
+                <option>Jharkhand</option>
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Ladakh</option>
+                <option>Lakshadweep</option>
+                <option>Madhya Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Manipur</option>
+                <option>Meghalaya</option>
+                <option>Mizoram</option>
+                <option>Nagaland</option>
+                <option>Odisha</option>
+                <option>Puducherry</option>
+                <option>Punjab</option>
+                <option>Rajasthan</option>
+                <option>Sikkim</option>
+                <option>Tamil Nadu</option>
+                <option>Telangana</option>
+                <option>Tripura</option>
+                <option>Uttar Pradesh</option>
+                <option>Uttarakhand</option>
+                <option>West Bengal</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label for="inputZip" class="form-label">Zip</label>
+            <input type="number" class="form-control" id="inputZip" name="zip"><br>
+        </div>
+
+          <div class="col-md-6">
+            <label>Student ID</label>
+            <input type="text" class="form-control" placeholder="Student id" name="id"><br>
+        </div>
+        <div class="col-md-6">
+            <label>College Name</label>
+            <select class="form-select" name="college">
+                <option selected>Choose college</option>
+                <option>MIT</option>
+                <option>KMC</option>
+                <option>MCHP</option>
+                <option>MSAP</option>
+                <option>DOC</option>
+                <option>MIC</option>
+                <option>WGSHA</option>
+            </select>
+        </div>
+        <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
+        </div>
+        <p class="mt-2">Already a member? <a href="/">Login Here</a></p>
+
+    </form>
+     </div>
+
+     
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

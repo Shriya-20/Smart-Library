@@ -1,0 +1,82 @@
+		
+	TRIGGERS
+
+
+1. Trigger after insert of book to update no_of_copies and availability
+
+DELIMITER //
+CREATE TRIGGER decrement_copies AFTER INSERT ON issues
+FOR EACH ROW
+BEGIN
+    DECLARE copies INT;
+    
+    -- Get the current number of copies for the borrowed book
+    SELECT no_of_copies INTO copies
+    FROM books
+    WHERE book_id = NEW.book_id;
+    
+    -- Decrement the number of copies by 1
+    SET copies = copies - 1;
+    
+    -- Update the number of copies in the books table
+    UPDATE books
+    SET no_of_copies = copies
+    WHERE book_id = NEW.book_id;
+END //
+DELIMITER ;
+
+
+
+2. Trigger after return of book to update no_of_copies and availability
+
+DELIMITER //
+
+CREATE TRIGGER after_return
+AFTER INSERT ON returnss
+FOR EACH ROW
+BEGIN
+    DECLARE book_count INT;
+    
+    -- Get the current number of copies for the returned book
+    SELECT no_of_copies INTO book_count
+    FROM books
+    WHERE book_id = NEW.book_id;
+
+    -- Increment the number of copies by 1
+    UPDATE books
+    SET no_of_copies = book_count + 1,
+        availability = 1
+    WHERE book_id = NEW.book_id;
+END;
+//
+
+DELIMITER ;
+
+
+
+
+3. Trigger to calculate dues/penalty
+
+DELIMITER //
+CREATE TRIGGER calculate_dues AFTER INSERT ON returnss
+FOR EACH ROW
+BEGIN
+    DECLARE days_late INT;
+    DECLARE fine_amount INT;
+    
+    -- Calculate the number of days between issue and return
+    SET days_late = DATEDIFF(NEW.return_date, NEW.actual_return_date);
+    
+    -- Calculate fine amount if the return is late
+    IF days_late > 30 THEN
+        SET fine_amount = (days_late - 30) * 5;
+    ELSE
+        SET fine_amount = 0;
+    END IF;
+    
+    -- Update the dues column in returnss table
+    UPDATE returnss
+    SET due = fine_amount
+    WHERE studentid = NEW.studentid AND book_id = NEW.book_id;
+END //
+DELIMITER ;

@@ -1,0 +1,142 @@
+.bg-g{
+    background: #1d2b64
+}
+.bg-nav1{
+    background: #DAE2F8;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.bg-nav{
+    background: #1D2B64;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F8CDDA, #1D2B64);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F8CDDA, #1D2B64); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.bg-fun{
+    background: #ED4264;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFEDBC, #ED4264);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFEDBC, #ED4264); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.bg1{
+    background: #704264;
+}
+.bg2{
+    background: #49243E;
+}
+.bg3{
+    background: #BB8493;
+}
+.bg3{
+    background:#DBAFA0;
+}
+
+
+
+.mt-100{
+    margin-top: 100px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.padding_nav{
+    padding-left: 15px;
+
+}
+.card1{
+    background: #E0EAFC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.search-wrapper{
+    display:flex;
+    flex-direction: column;
+    gap: .25rem
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins','sans-serif';
+}
+.container1{
+    width: 100%;
+    height: 100vh;
+    background-image:url(images/library.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.profile-box{
+    background:#110407;
+    text-align: center;
+    padding: 90px 130px;
+    color: #fff;
+    position: relative;
+    border-radius: 10px;
+
+}
+.logout-icon{
+    width: 25px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+
+
+}
+.ruppee-icon{
+    width: 25px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+}
+.profile-icon{
+    width: 150px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 6px;
+    margin-top: 40px;
+}
+.profile-bottom{
+    background: #fff;
+    color: #999;
+    padding: 60px 0;
+    margin-right: -90px;
+    margin-left: -90px;
+    margin-bottom: -40px;
+    border-radius: 20px;
+    margin-top:-10px;
+}
+.profile-bottom img{
+    width: 15 px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.profile-box button{
+    background: white;
+    color: grey;
+    border: none;
+    outline: none;
+    box-shadow:0 5px 10px rgba(244,67,54,0.5);
+    padding: 15px 60px;
+    border-radius: 30px; 
+    margin-bottom: -50px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.issue-book-btn:hover {
+    background-color: orange;
+}
+
+.profile-box h3{
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: 500;
+}
