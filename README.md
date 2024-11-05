@@ -1,2 +1,2 @@
-# Library-Management-System
-A Database systems project using MySql , Flask
+# Smart Library App
+A Database systems project using MySql, Flask
